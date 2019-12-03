@@ -3,14 +3,19 @@ import Navbar from './components/Navbar';
 import EventList from './components/EventList';
 import ThemeContextProvider from './context/ThemeContext';
 import ThemeToggle from './components/ThemeToggle';
+import AuthContextProvider from './context/AuthContext';
 
 function App () {
   return (
     <div className="App">
       <ThemeContextProvider>
-        <Navbar />
-        <EventList />
-        <ThemeToggle />
+        <AuthContextProvider>
+
+          <Navbar />
+          <EventList />
+          <ThemeToggle />
+        </AuthContextProvider>
+
       </ThemeContextProvider>
     </div>
   );
